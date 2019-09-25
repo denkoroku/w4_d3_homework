@@ -1,0 +1,32 @@
+<div class = "form-wrapper">
+<form action="/students/<%= @students.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+
+<div class ="form-el">
+  <label for="first-name">First Name:</label>
+    <input id="first-name" type="text" name="first_name" value="<%= @students.first_name %>" />
+</div>
+
+<div class ="form-el">
+  <label for="last-name">Last Name:</label>
+    <input id="last-name" type="text" name="last_name" value="<%= @students.last_name %>">
+</div>
+
+<div class ="form-el">
+    <label for="age">Age:</label>
+      <input id="age" type="integer" name="age" value="<%= @students.age %>">
+</div>
+
+  <div class ="form-el">
+    <label for="house_select" >Select House:</label>
+      <select name="house_id" id="house_select">
+        <option value="1" <%= "selected"if @students.house_id == 1 %>>Gryffindor</option>
+        <option value="2"<%= "selected"if @students.house_id == 2 %>>Hufflepuff</option>
+        <option value="3" <%= "selected"if @students.house_id == 3 %>>Ravenclaw</option>
+        <option value="4" <%= "selected"if @students.house_id == 4 %>>Slytherin</option>
+      </select>
+    </div>
+    <div class ="form-el">
+      <input type="submit"  value="update">
+    </div>
+</form>

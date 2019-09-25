@@ -1,0 +1,13 @@
+
+<div id="show" class="text-center"><br/>
+  <h2> <%= @students.first_name %> <%= @students.last_name %></h2><br/><br/>
+<form action="/students/<%= @students.id %>/edit" >
+  <input type="submit" value="edit student details">
+</form><br/>
+<hr/>
+<br />
+<form action="/students/<%= @students.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="delete student">
+</form>
+</div>

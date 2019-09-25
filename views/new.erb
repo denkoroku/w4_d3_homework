@@ -1,0 +1,34 @@
+<div class="container">
+<h2>Add New Student</h2>
+
+<div class="form-wrapper"
+<form action="/students" method="post">
+  <div class="form-el"
+    label for="first-name">First Name:</label>
+    <input id="first-name" type="text" name="first_name" />
+  </div>
+
+  <div class="form-el"
+    <label for="last-name">Last Name:</label>
+    <input id="last-name" type="text" name="last_name">
+  </div>
+
+  <div class="form-el"
+    <label for="age">Age:</label>
+    <input id="age" type="integer" name="age">
+  </div>
+
+  <div class="form-el"
+    <label for="house_select">Select House:</label>
+        <select name = "house_id" id="house_select">
+          <% @houses.each do |house| %>
+              <option value = <%= house.id %>> <%= house.name %></option>
+          <% end %>
+      </select>
+    <input type="submit" value="Add Student"/>
+  </div>
+
+</div>
+</div>
+</form>
+</div>
